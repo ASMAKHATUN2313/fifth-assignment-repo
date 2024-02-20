@@ -1,21 +1,27 @@
 const allSeat= document.getElementsByClassName("seat");
- console.log(allSeat);
+ //console.log(allSeat);
 let count=0;
  for(const seat of allSeat){
     seat.addEventListener('click',function(e){
 
         count=count+1;
+
+        if(count>=5){
+         alert('you can book only 4 ticket');
+         return;
+      }
         const  TicketPrice=document.getElementById("ticket-price").innerText;
        const convertTicketPrice=parseInt(TicketPrice);
          const seatName=e.target.innerText+' '+"Economy"+' '+ convertTicketPrice;
 
-
+     const availableSeat=document.getElementById('available-seat');
+     const availableSeat2=availableSeat.innerText;
+     const convertAvailableSeat= parseInt(availableSeat2);
+     const newSeat=convertAvailableSeat -1;
+     availableSeat.innerText = newSeat;
          
 
-         if(count===5){
-            alert('you can book only 4 ticket');
-        return;
-         }
+         
         
          //document.getElementById("li").appendChild(seatName);
          const SelectedContainer=document.getElementById("selected-seat-container") ;
@@ -33,34 +39,21 @@ let count=0;
 
          let sum= convertTicketPrice + convertedTotalCost;
 
-        //   document.getElementById("total-cost").innerText=convertedTotalCost+convertTicketPrice;
+           document.getElementById("total-cost").innerText=convertedTotalCost+convertTicketPrice;
 
 
-         const grandTotal=document.getElementById("grand-total").innerText;
-         const convertGrandTotal=parseInt(grandTotal);
-         const sum2= grandTotal - convertGrandTotal + sum;
-         console.log(sum2);
-         setInnerText("total-cost",sum);
-         setInnerText("grand-total",sum2);
+         // const grandTotal=document.getElementById("grand-total").innerText;
+         // const convertGrandTotal=parseInt(grandTotal);
+         // const sum2= grandTotal - convertGrandTotal + sum;
+         
 
         document.getElementById("select-seat").innerText=count;
         
-        // const coupon = document.getElementById('coupon-field').innerText;
-        // if(coupon==='NEW15'){
-        //    const discount= sum*0.15;
-        //    sum2= sum - discount;
-        //    const applyButton =document.getElementById('apply-button');
-        //    applyButton.disabled = true;
-           
-        // }
-        // else if(coupon ==='Couple 20'){
-        //     const discount=sum*0.20;
-        //     sum2= sum-discount;
-        // }
+        
 
 
-
-
+         //setInnerText("total-cost",sum);
+         // setInnerText("grand-total",sum2);
 
     })
 
@@ -70,37 +63,38 @@ let count=0;
     document.getElementById(id).innerText=value;
  }
 
- function applyCoupon(){
-    let couponInput = document.getElementById("couponInput");
-    let applyButton = document.getElementById("applyButton");
+ function coupon(){
+   let couponInput = document.getElementById("coupon-field");
+        //let applyButton = document.getElementById("apply-button");
+        
+         let coupon= couponInput.value;
 
-    let couponCode = couponInput.value;
+         console.log(coupon);
+         let grandTotal=document.getElementById('grand-total');
 
-         if(coupon==='NEW15'){
-        const discount= sum*0.15;
-           sum2= sum - discount;
-           const applyButton =document.getElementById('apply-button');
-           applyButton.disabled = true;
-           
+
+         let totalPrice=  document.getElementById('total-cost').innerText;
+         let convertTotalPrice=parseInt(totalPrice);
+
+        if(coupon==='NEW15'){
+          
+         const discount= convertTotalPrice*0.85;
+         grandTotal.innerText=discount;
+         document.getElementById("coupon-input").classList.add('hidden');
+         console.log(grandTotal);
+
+          
+        }
+       else if(coupon ==='Couple 20'){
+           const discount=convertTotalPrice*0.80;
+           grandTotal.innerText=discount;
+           document.getElementById("coupon-input").classList.add('hidden');
          }
-        else if(coupon ==='Couple 20'){
-             const discount=sum*0.20;
-             sum2= sum-discount;
+         else{
+            alert("Enter correct coupon");
          }
+        
 
- }
 
-
- function handleFormSubmission(event) {
-    event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    // Validate form inputs
-    if (!name || !email || !phone) {
-        alert('Please fill in all fields');
-        return;
-    }
-    
 }
 

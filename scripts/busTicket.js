@@ -1,4 +1,4 @@
-// A SECTION
+//A SECTION
 function A1(){
     const button = document.getElementById("A1");
     button.style.backgroundColor = "#1DD100"; 
@@ -15,6 +15,9 @@ function A4(){
     const button = document.getElementById("A4");
     button.style.backgroundColor = "#1DD100"; 
 }
+
+
+
 // B SECTION
 
 function B1(){
@@ -173,15 +176,18 @@ function J4(){
 
 // modal
 
-function displayModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "block";
-}
+
 
 // Function to close the modal
-function closeModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "none";
+function next() {
+    const homeSection=document.getElementById('home-screen');
+    homeSection.classList.add('hidden');
+
+    const success = document.getElementById("success-section");
+    success.classList.remove('hidden');
 }
+
+ 
+
 
 
