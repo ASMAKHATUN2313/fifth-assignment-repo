@@ -175,7 +175,7 @@
         </div>
         <div class="items-center flex flex-col justify-center ">
           <img src="images/fare.png" alt="">
-          <h1 class="text-3xl font-bold">500 Taka</h1>
+          <h1 class="text-3xl font-bold"><span id="ticket-price">550</span> Taka</h1>
           <p class="text-2xl font-semibold">Per Seat</p>
         </div>
         </div>
@@ -203,79 +203,82 @@
       </div>
       <!-- button -->
       <div>
-        <div class="flex justify-between my-10">
+        <div class=" flex justify-between my-10 ">
           <button>A</button>
-          <button class="btn text-[#03071280]">A1</button>
-          <button class="btn text-[#03071280]">A2</button>
-          <button class="btn text-[#03071280]">A3</button>
-          <button class="btn text-[#03071280]">A4</button>
+          <button id="A1" onclick="A1()" class="btn seat  text-[#03071280]">A1</button>
+          <button id="A2" onclick="A2()" class="btn seat text-[#03071280]">A2</button>
+          <button id="A3" onclick="A3()" class="btn seat text-[#03071280]">A3</button>
+          <button id="A4" onclick="A4()" class="btn seat text-[#03071280]">A4</button>
         </div>
+
         <div class="flex justify-between my-10">
           <button>B</button>
-          <button class="btn text-[#03071280]">B1</button>
-          <button class="btn text-[#03071280]">B2</button>
-          <button class="btn text-[#03071280]">B3</button>
-          <button class="btn text-[#03071280]">B4</button>
+          <button id="B1" onclick="B1()"  class="btn seat  text-[#03071280]">B1</button>
+          <button id="B2" onclick="B2()"  class="btn seat  text-[#03071280]">B2</button>
+          <button id="B3" onclick="B3()" class="btn  seat text-[#03071280]"> B3</button>
+          <button id="B4" onclick="B4()" class="btn  seat text-[#03071280]"> B4</button>
         </div>
         <div class="flex justify-between my-10">
           <button>C</button>
-          <button class="btn text-[#03071280]">C1</button>
-          <button class="btn text-[#03071280]">C2</button>
-          <button class="btn text-[#03071280]">C3</button>
-          <button class="btn text-[#03071280]">C4</button>
+          <button id="C1" onclick="C1()" class="btn seat text-[#03071280]">C1</button>
+          <button id="C2" onclick="C2()" class="btn seat text-[#03071280]">C2</button>
+          <button id="C3" onclick="C3()" class="btn seat text-[#03071280]">C3</button>
+          <button id="C4" onclick="C4()" class="btn seat text-[#03071280]">C4</button>
         </div>
         <div class="flex justify-between my-10">
           <button>D</button>
-          <button class="btn text-[#03071280]">D1</button>
-          <button class="btn text-[#03071280]">D2</button>
-          <button class="btn text-[#03071280]">D3</button>
-          <button class="btn text-[#03071280]">D4</button>
+          <button id="D1" onclick="D1()" class="btn seat text-[#03071280]">D1</button>
+          <button id="D2" onclick="D2()" class="btn seat text-[#03071280]">D2</button>
+          <button id="D3" onclick="D3()" class="btn seat text-[#03071280]">D3</button>
+          <button id="D4" onclick="D4()" class="btn seat text-[#03071280]">D4</button>
         </div>
         <div class="flex justify-between my-10">
           <button>E</button>
-          <button class="btn text-[#03071280]">F1</button>
-          <button class="btn text-[#03071280]">F2</button>
-          <button class="btn text-[#03071280]">F3</button>
-          <button class="btn text-[#03071280]">F4</button>
+          <button id="E1" onclick="E1()" class="btn seat text-[#03071280]">E1</button>
+          <button id="E2" onclick="E2()" class="btn seat text-[#03071280]">E2</button>
+          <button id="E3" onclick="E3()" class="btn seat text-[#03071280]">E3</button>
+          <button id="E4" onclick="E4()" class="btn seat text-[#03071280]">E4</button>
         </div>
         <div class="flex justify-between my-10">
           <button>F</button>
-          <button class="btn text-[#03071280]">F1</button>
-          <button class="btn text-[#03071280]">F2</button>
-          <button class="btn text-[#03071280]">F3</button>
-          <button class="btn text-[#03071280]">F4</button>
+          <button id="F1" onclick="F1()" class="btn seat text-[#03071280]">F1</button>
+          <button id="F2" onclick="F2()" class="btn seat text-[#03071280]">F2</button>
+          <button id="F3" onclick="F3()" class="btn seat text-[#03071280]">F3</button>
+          <button id="F4" onclick="F4()" class="btn seat text-[#03071280]">F4</button>
         </div>
+        
         <div class="flex justify-between my-10">
           <button>G</button>
-          <button class="btn text-[#03071280]">G1</button>
-          <button class="btn text-[#03071280]">G2</button>
-          <button class="btn text-[#03071280]">G3</button>
-          <button class="btn text-[#03071280]">G4</button>
+          <button id="G1" onclick="G1()" class="btn seat text-[#03071280]">G1</button>
+          <button id="G2" onclick="G2()" class="btn seat text-[#03071280]">G2</button>
+          <button id="G3" onclick="G3()" class="btn seat text-[#03071280]">G3</button>
+          <button id="G4" onclick="G4()" class="btn seat text-[#03071280]">G4</button>
         </div>
         <div class="flex justify-between my-10">
           <button>H</button>
-          <button class="btn text-[#03071280]">H1</button>
-          <button class="btn text-[#03071280]">H2</button>
-          <button class="btn text-[#03071280]">H3</button>
-          <button class="btn text-[#03071280]">H4</button>
+          <button id="H1" onclick="H1()" class="btn seat text-[#03071280]">H1</button>
+          <button id="H2" onclick="H2()" class="btn seat text-[#03071280]">H2</button>
+          <button id="H3" onclick="H3()" class="btn seat text-[#03071280]">H3</button>
+          <button id="H4" onclick="H4()" class="btn seat text-[#03071280]">H4</button>
         </div>
-        <div class="flex justify-between my-10">
+        <di class="flex justify-between my-10">
           <button>I</button>
-          <button class="btn text-[#03071280]">I1</button>
-          <button class="btn text-[#03071280]">I2</button>
-          <button class="btn text-[#03071280]">I3</button>
-          <button class="btn text-[#03071280]">I4</button>
-        </div>
+          <button id="I1" onclick="I1()" class="btn seat text-[#03071280]">I1</button>
+          <button id="I2" onclick="I2()" class="btn seat text-[#03071280]">I2</button>
+          <button id="I3" onclick="I3()" class="btn seat text-[#03071280]">I3</button>
+          <button id="I4" onclick="I4()" class="btn seat text-[#03071280]">I4</button>
+        </di>
         <div class="flex justify-between my-10">
           <button>J</button>
-          <button class="btn text-[#03071280]">J1</button>
-          <button class="btn text-[#03071280]">J2</button>
-          <button class="btn text-[#03071280]">J3</button>
-          <button class="btn text-[#03071280]">J4</button>
+          <button id="J1" onclick="J1()" class="btn seat text-[#03071280]">J1</button>
+          <button id="J2" onclick="J2()" class="btn seat text-[#03071280]">J2</button>
+          <button id="J3" onclick="J3()" class="btn seat text-[#03071280]">J3</button>
+          <button id="J4" onclick="J4()" class="btn seat text-[#03071280]">J4</button>
         </div>
         
       </div>
     </div>
+    
     <div class="w-[500px]">
      <div>
       <h1 class="text-3xl font-semibold mb-5">Select Your Seat</h1>
@@ -283,33 +286,27 @@
      </div>
      <div class="bg-[#F7F8F8] m-10 rounded-3xl p-10">
        <div class="flex justify-between">
-        <h1>Seat <span><button class="bg-[#1DD100] p-2">2</button></span></h1>
+        <h1>Seat <span id="select-seat"><button class="bg-[#1DD100] p-2 rounded-2xl">0</button></span></h1>
         <h1>Class</h1>
         <h1>Price</h1>
        </div>
-       <div class="flex justify-between my-5">
-        <p class="text-#03071233]">c2</p>
-        <p class="text-#03071233]">Economy</p>
-        <p class="text-#03071233]">550</p>
-       </div>
-       <div class="flex justify-between">
-        <p class="text-#03071233]">c2</p>
-        <p class="text-#03071233]">Economy</p>
-        <p class="text-#03071233]">550</p>
-       </div>
+      <ul id="selected-seat-container"
+      class="selected-seat-container"
+      ></ul>
+       
        <hr class="border-2  my-5">
        <div class="flex justify-between">
         <h1 class="text-2xl font-semibold">Total price</h1>
-        <h1 class="text-2xl font-semibold">BDT <span> 1100</span></h1>
+        <h1 class="text-2xl font-semibold">BDT <span id="total-cost">0</span></h1>
        </div>
        <!-- copupon  -->
-       <div class="my-5 relative">
-        <input type="text" name="" class="p-4 rounded-2xl pr-20 w-full" placeholder="Have any copupon ? ">
-        <button class="btn bg-[#1DD100] text-white absolute right-1 top-1">Apply</button>
+       <div  id="couponInput" class="my-5 relative ">
+        <input type="text" id="coupon-field" class="p-4 rounded-2xl pr-20 w-full" placeholder="Have any coupon ? ">
+        <button onclick="applyCoupon()" id="applyButton" class="btn bg-[#1DD100] text-white absolute right-1 top-1">Apply</button>
        </div>
        <div class="flex justify-between">
         <h1 class="text-2xl font-semibold">Grand Total</h1>
-        <h1 class="text-2xl font-semibold">BDT <span> 1100</span></h1>
+        <h1 class="text-2xl font-semibold">BDT <span id="grand-total">0</span></h1>
        </div>
      </div>
      <div class="m-10">
@@ -351,5 +348,9 @@
   
       </div>
     </section>
+     <script src="scripts/busTicket.js"></script>
+    <script src="scripts/script.js"></script>
+    <!-- <script src="scripts/script.js"></script> -->
+   
 </body>
 </html>
